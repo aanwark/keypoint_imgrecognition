@@ -1,0 +1,10 @@
+This program demonstrates the use of keypoint matching algorithm (like SIFT in this case) to recognize the object in the image.
+
+"Data" directory contains some template and test images which are used for this demonstration. The algorithm is implemented in "main.m" script.
+
+VlFeat library has been used to achieve this task. It can be downloaded from:
+http://www.vlfeat.org/
+or
+https://github.com/vlfeat/vlfeat
+
+Note: The script won't run without VlFeat.

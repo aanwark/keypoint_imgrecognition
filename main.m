@@ -1,7 +1,7 @@
 clc; close all; clear;
 
 % Change the image value here 
-template = imread ('data/template/3.jpg');
+template = imread ('data/template/1.jpg');
 
 template_resize = imresize (template, [150 150]);
 
@@ -32,9 +32,19 @@ end
 
 switch loc
     case 1
-        disp ('Its a Cat!')
+        announce = 'Its a Cat!';
+        disp (announce)
     case 2
-        disp ('Its a Duckling!')
+        announce = 'Its a Ducking!';
+        disp (announce)
     case 3
-        disp ('Its a Penguin!')
+        announce = 'Its a Penguin!';
+        disp (announce);
 end
+
+view_name = int2str (loc);
+view_name = strcat (view_name, '.jpg');
+view_name  = strcat ('data/test/', view_name);
+view = imread (view_name);
+text = insertText (view, [0 0], announce);
+imshow (text);
